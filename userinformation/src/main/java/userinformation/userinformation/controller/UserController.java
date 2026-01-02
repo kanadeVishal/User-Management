@@ -68,4 +68,9 @@ public class UserController {
         return new ResponseEntity<>(output, HttpStatus.ACCEPTED);
     }
 
+    @GetMapping("/health/check")
+    public ResponseEntity<String> healthCheck(){
+        return new ResponseEntity<>("User service is up", HttpStatus.OK);
+    }
+
 }
