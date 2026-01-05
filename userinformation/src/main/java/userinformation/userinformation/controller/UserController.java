@@ -62,13 +62,14 @@ public class UserController {
         return sum;
     }
 
+    //Api used to update the user details based on id
     @PutMapping("/update/user/{id}")
     public ResponseEntity<String> updateUser(@RequestBody User user, @PathVariable int id){
         String output = userService.updateUserById(user, id);
         return new ResponseEntity<>(output, HttpStatus.ACCEPTED);
     }
 
-    //Api is used to check the health of userinformation service health check
+    //Api is used to check the health of userinformation service health check api
     @GetMapping("/health/check")
     public ResponseEntity<String> healthCheck(){
         return new ResponseEntity<>("User service is up", HttpStatus.OK);
