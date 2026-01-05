@@ -68,7 +68,7 @@ public class UserController {
         return new ResponseEntity<>(output, HttpStatus.ACCEPTED);
     }
 
-    //Api is used to check the health of userinformation service
+    //Api is used to check the health of userinformation service health check
     @GetMapping("/health/check")
     public ResponseEntity<String> healthCheck(){
         return new ResponseEntity<>("User service is up", HttpStatus.OK);
