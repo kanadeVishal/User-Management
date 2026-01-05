@@ -52,7 +52,7 @@ public class UserController {
     public String getHelloPrintMessage() {
         return "Hello";
     }
-
+    //APi to calculate sum of two number
     @PutMapping("/sumOfTwoNumber")
     public int sumOfTwoNumber(@RequestBody int[] values) {
         int sum = 0;
