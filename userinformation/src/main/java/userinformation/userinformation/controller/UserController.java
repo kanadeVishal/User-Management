@@ -42,6 +42,7 @@ public class UserController {
         userService.deleteUser(id);
     }
 
+    //Api to delete all the users
     @DeleteMapping("/deleteAllUser")
     public void deleteAllUer() {
         userService.deleteAllUser();
@@ -50,7 +51,7 @@ public class UserController {
     //API to get hello deme time with harini
     @GetMapping("/hello")
     public String getHelloPrintMessage() {
-        return "Hello";
+        return "Hello world";
     }
     //APi to calculate sum of two number
     @PutMapping("/sumOfTwoNumber")
