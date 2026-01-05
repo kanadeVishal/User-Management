@@ -61,7 +61,7 @@ public class UserController {
         }
         return sum;
     }
-
+    //API is used to update the user details
     @PutMapping("/update/user/{id}")
     public ResponseEntity<String> updateUser(@RequestBody User user, @PathVariable int id){
         String output = userService.updateUserById(user, id);
