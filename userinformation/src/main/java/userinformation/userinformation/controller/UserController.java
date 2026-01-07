@@ -36,12 +36,13 @@ public class UserController {
     public User updateUser(@PathVariable int id, @RequestBody User user) {
         return userService.updateUser(id, user);
     }
-
+    //delete the use details
     @DeleteMapping("/delete/{id}")
     public void deleteUer(@PathVariable int id) {
         userService.deleteUser(id);
     }
 
+    //Api to delete all the users
     @DeleteMapping("/deleteAllUser")
     public void deleteAllUer() {
         userService.deleteAllUser();
@@ -50,7 +51,7 @@ public class UserController {
     //API to get hello deme time with harini
     @GetMapping("/hello")
     public String getHelloPrintMessage() {
-        return "Hello";
+        return "Hello world";
     }
     //APi to calculate sum of two number
     @PutMapping("/sumOfTwoNumber")
