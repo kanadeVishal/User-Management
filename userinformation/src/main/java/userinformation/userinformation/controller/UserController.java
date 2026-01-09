@@ -75,10 +75,27 @@ public class UserController {
         return new ResponseEntity<>("User service is up", HttpStatus.OK);
     }
 
-    //APi for test
+    //APi for test 
      @GetMapping("/testapi")
     public ResponseEntity<String> testApi(){
         return new ResponseEntity<>("User service test api", HttpStatus.OK);
+    }
+    
+    //update user details api which updates the mobile no, email and address
+    @PutMapping("/{userId}")
+    public ResponseEntity<ApiResponse> updateUser(
+            @PathVariable Long userId,
+            @Valid @RequestBody UpdateUserRequest request) {
+
+        User updatedUser = userService.updateUser(userId, request);
+
+        return ResponseEntity.ok(
+                ApiResponse.builder()
+                        .status("SUCCESS")
+                        .message("User details updated successfully")
+                        .data(updatedUser.getId())
+                        .build()
+        );
     }
 
 }
