@@ -75,13 +75,13 @@ public class UserController {
         return new ResponseEntity<>("User service is up", HttpStatus.OK);
     }
 
-    //APi for test
+    //APi for test 
      @GetMapping("/testapi")
     public ResponseEntity<String> testApi(){
         return new ResponseEntity<>("User service test api", HttpStatus.OK);
     }
     
-    //update user details
+    //update user details api which updates the mobile no, email and address
     @PutMapping("/{userId}")
     public ResponseEntity<ApiResponse> updateUser(
             @PathVariable Long userId,
