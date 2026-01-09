@@ -75,4 +75,10 @@ public class UserController {
         return new ResponseEntity<>("User service is up", HttpStatus.OK);
     }
 
+    //APi for test
+     @GetMapping("/testapi")
+    public ResponseEntity<String> testApi(){
+        return new ResponseEntity<>("User service test api", HttpStatus.OK);
+    }
+
 }
